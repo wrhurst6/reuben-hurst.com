@@ -922,7 +922,12 @@ a.publication-paper-title:hover {
     background: white;
     color: var(--text-color);
     text-align: left;
-    padding: 150px 20px 80px;
+    padding: 120px 20px 80px;
+}
+
+.paw-hero .section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .paw-title {
