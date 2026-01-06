@@ -918,10 +918,10 @@ a.publication-paper-title:hover {
     min-height: 50vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: white;
     color: var(--text-color);
-    text-align: center;
+    text-align: left;
     padding: 150px 20px 80px;
 }
 
@@ -937,7 +937,7 @@ a.publication-paper-title:hover {
     font-size: 1.3rem;
     font-weight: 300;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 0 20px;
     line-height: 1.8;
     opacity: 0.95;
 }
