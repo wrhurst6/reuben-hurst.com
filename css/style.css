@@ -170,6 +170,7 @@ body {
 
 .hero-profile {
     flex-shrink: 0;
+    margin-left: 20px;
 }
 
 .hero-image {
