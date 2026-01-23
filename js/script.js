@@ -165,7 +165,10 @@ buttons.forEach(button => {
 // Parallax Effect for Hero Section
 // ===================================
 
+// Only enable parallax on desktop (768px+) to prevent mobile scroll issues
 window.addEventListener('scroll', () => {
+    if (window.innerWidth < 768) return;
+
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero-content');
     if (hero) {
