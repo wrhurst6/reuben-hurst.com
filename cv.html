@@ -54,8 +54,19 @@
                 font-size: 2rem;
             }
             .pdf-viewer {
-                height: 500px;
+                display: none;
             }
+            .mobile-pdf-notice {
+                display: block;
+                text-align: center;
+                padding: 40px 20px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                color: #666;
+            }
+        }
+        .mobile-pdf-notice {
+            display: none;
         }
     </style>
 </head>
@@ -94,6 +105,9 @@
                 </a>
             </div>
             <iframe src="cv.pdf" class="pdf-viewer" type="application/pdf"></iframe>
+            <div class="mobile-pdf-notice">
+                <p>Tap the download button above to view the full CV on your device.</p>
+            </div>
         </div>
     </section>
 
