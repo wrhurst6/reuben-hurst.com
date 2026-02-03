@@ -68,6 +68,17 @@
         .mobile-pdf-notice {
             display: none;
         }
+        .btn-text-mobile {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .btn-text-desktop {
+                display: none;
+            }
+            .btn-text-mobile {
+                display: inline;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,13 +106,14 @@
         <div class="cv-content">
             <div class="cv-header">
                 <h2 class="section-title">Curriculum Vitae</h2>
-                <a href="cv.pdf" download target="_blank" class="download-btn">
+                <a href="cv.pdf" id="cv-download-btn" class="download-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Download CV
+                    <span class="btn-text-desktop">Download CV</span>
+                    <span class="btn-text-mobile">Open CV</span>
                 </a>
             </div>
             <iframe src="cv.pdf" class="pdf-viewer" type="application/pdf"></iframe>
@@ -112,5 +124,13 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script>
+        document.getElementById('cv-download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Use absolute URL and window.open for better mobile compatibility
+            var pdfUrl = new URL('cv.pdf', window.location.href).href;
+            window.open(pdfUrl, '_self');
+        });
+    </script>
 </body>
 </html>
